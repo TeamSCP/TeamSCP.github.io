@@ -23,7 +23,7 @@ timezone: Seoul
 
 title: SCP                     # the main title
 
-tagline: SCP 기술 블로그    # it will display as the sub-title
+tagline: 기술 블로그    # it will display as the sub-title
 
 description: #>-                        # used by seo meta and the atom feed
   #A minimal, responsive, and powerful Jekyll theme for presenting professional writing.
