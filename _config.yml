@@ -23,6 +23,8 @@ timezone: Seoul
 
 title: SCP                     # the main title
 
+author: SCP
+
 tagline: 기술 블로그    # it will display as the sub-title
 
 description: #>-                        # used by seo meta and the atom feed
