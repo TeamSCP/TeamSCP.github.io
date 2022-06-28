@@ -21,7 +21,10 @@ timezone: Seoul
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: SCP    Technology Blog            
+title: |
+    SCP2
+  
+    Technology Blog
 
 tagline:    # it will display as the sub-title
 
