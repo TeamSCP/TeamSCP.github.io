@@ -22,8 +22,8 @@ timezone: Seoul
 # ↓ --------------------------
 
 title: | 
-SCP 
-Technology Blog                     # the main title
+  SCP 
+  Technology Blog                     # the main title
 
 tagline:    # it will display as the sub-title
 
