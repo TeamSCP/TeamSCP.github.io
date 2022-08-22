@@ -1,5 +1,3 @@
----
-
 title: "[전파해킹] HackRF 소개와 환경 구축 (우분투)"
 author:
   name: 노무승
@@ -11,7 +9,6 @@ categories:
   date: 2022-08-22
   last_modified_at: 2022-08-22
 
----
 
 ### 1. HackRF One이란?
 
