@@ -398,7 +398,7 @@ access_token = jwt.encode(payload, SECRET_KEY, algorithm='HS256')
 
 <br>
 
-##### 참고
+# 참고
 
 [비밀번호 암호화 Bcrypt (gensalt, hashpw, checkpw) : 네이버 블로그](https://blog.naver.com/PostView.naver?blogId=wldks79&logNo=222272099807)
 
