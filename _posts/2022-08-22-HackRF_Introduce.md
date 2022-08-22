@@ -4,7 +4,7 @@ author:
   name: 노무승
 
 categories:
-  - 전파해킹
+  - 
 tags:
   - [HackRF, 전파해킹] 
 
