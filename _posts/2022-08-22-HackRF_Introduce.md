@@ -16,7 +16,7 @@ last_modified_at: 2022-08-22
 
 <img src="https://user-images.githubusercontent.com/12112214/185939994-f2e0eba6-b11f-4cf3-952d-da58fb9a24d0.jpg" title="" alt="1290025.jpg" width="400">
 
- **"HackRF One"**은 Great Scott Gadgets라는 사람이 만든 SDR 장치이다. SDR(Software Defined Radio) 장치는 단어 그대로 소프트웨어로 제어할 수 있는 라디오(FM 라디오 보다 폭 넓은 개념) 장치를 말한다. 현재 한국에서는 23만원 정도에 팔고 있는 것으로 확인되는데 알리 익스프레스나 이베이 등 해외직구를 통하면 더욱 싸게 구매할 수 있다.
+ **"HackRF One"**은 Great Scott Gadgets라는 사람이 만든 SDR 장치다. SDR(Software Defined Radio) 장치는 단어 그대로 소프트웨어로 제어할 수 있는 라디오(FM 라디오 보다 폭 넓은 개념) 장치를 말한다. 현재 한국에서는 23만원 정도에 팔고 있는 것으로 확인되는데 알리 익스프레스나 이베이 등 해외직구를 통하면 더욱 싸게 구매할 수 있다.
 
 
 
