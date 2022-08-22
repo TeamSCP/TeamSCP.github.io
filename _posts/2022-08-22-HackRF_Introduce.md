@@ -6,12 +6,12 @@ author:
 categories:
   - 전파해킹
 tags:
-  - [HackRF], [전파해킹] 
+  - [HackRF, 전파해킹] 
 
 date: 2022-08-22
 last_modified_at: 2022-08-22
 ---
-
+<br>
 ### 1. HackRF One이란?
 
 <img src="https://user-images.githubusercontent.com/12112214/185939994-f2e0eba6-b11f-4cf3-952d-da58fb9a24d0.jpg" title="" alt="1290025.jpg" width="232">
