@@ -1,14 +1,16 @@
+---
 title: "[전파해킹] HackRF 소개와 환경 구축 (우분투)"
 author:
   name: 노무승
+
 categories:
+  - 전파해킹
+tags:
+  - [HackRF], [전파해킹] 
 
-- Notice
-  tags:
-- [HackRF], [전파해킹]
-  date: 2022-08-22
-  last_modified_at: 2022-08-22
-
+date: 2022-08-22
+last_modified_at: 2022-08-22
+---
 
 ### 1. HackRF One이란?
 
@@ -81,15 +83,9 @@ apt install -y gnuradio gr-osmosdr
 ### 4. 참고 자료
 
 [원문] <HackRF One SDR장비 구매 및 소개>
-
 https://blog.naver.com/nms200299/221400205899 (본인 블로그)
 
 
 
 [원문] <HackRF 및 GNU Radio 우분투 리눅스 환경 구축> https://blog.naver.com/nms200299/222801381670 (본인 블로그)
-
-
-
-
-
 
