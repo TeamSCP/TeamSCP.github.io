@@ -3,6 +3,8 @@
 # Import the theme
 theme: jekyll-theme-chirpy
 
+futrue: true
+
 # Change the following value to '/PROJECT_NAME' ONLY IF your site type is GitHub Pages Project sites
 # and doesn't have a custom domain.
 baseurl: ''
@@ -195,5 +197,3 @@ jekyll-archives:
   permalinks:
     tag: /tags/:name/
     category: /categories/:name/
-    
-futrue: true
