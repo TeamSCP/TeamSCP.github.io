@@ -3,11 +3,12 @@ title: "[Flask] Bcrypt를 이용한 비밀번호 암호화 & JWT 인증 기반 �
 author:
   name: 0da
 categories:
-- Web
+  - Web
 tags:
-- [Flask] 
-- [Bcrypt]
-- [JWT]
+  - [Flask] 
+  - [Bcrypt]
+  - [JWT]
+
 date: 2022-08-23
 last_modified_at: 2022-08-23
 ---
