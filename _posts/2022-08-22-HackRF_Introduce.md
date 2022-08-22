@@ -12,7 +12,7 @@ date: 2022-08-22
 last_modified_at: 2022-08-22
 ---
 
-### 1. HackRF One이란?
+## 1. HackRF One이란?
 
 <img src="https://user-images.githubusercontent.com/12112214/185939994-f2e0eba6-b11f-4cf3-952d-da58fb9a24d0.jpg" title="" alt="1290025.jpg" width="400">
 
@@ -30,7 +30,7 @@ last_modified_at: 2022-08-22
 
 ---
 
-### 2. HackRF 도구 설치 (우분투)
+## 2. HackRF 도구 설치 (우분투)
 
 ```
 apt update
@@ -55,7 +55,7 @@ apt install -y hackrf libhackrf-dev libhackrf0
 
 ---
 
-### 3. GNU Radio 설치 (우분투)
+## 3. GNU Radio 설치 (우분투)
 
 <img title="" src="https://user-images.githubusercontent.com/12112214/185940215-0506ae4a-407e-446d-827b-6c6126f2b140.png" alt="1200px-GNU_Radio_Companion_(3.8.1.0)_Screenshot.png" width="364">
 
@@ -80,7 +80,7 @@ apt install -y gnuradio gr-osmosdr
 
 ---
 
-### 4. 참고 자료
+## 4. 참고 자료
 
 [원문] <HackRF One SDR장비 구매 및 소개>
 https://blog.naver.com/nms200299/221400205899 (본인 블로그)
