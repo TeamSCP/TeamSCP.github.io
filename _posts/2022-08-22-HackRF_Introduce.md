@@ -88,7 +88,7 @@ https://blog.naver.com/nms200299/221400205899 (본인 블로그)
 
 
 
+
 [원문] [HackRF 및 GNU Radio 우분투 리눅스 환경 구축]
 
 https://blog.naver.com/nms200299/222801381670 (본인 블로그)
-
