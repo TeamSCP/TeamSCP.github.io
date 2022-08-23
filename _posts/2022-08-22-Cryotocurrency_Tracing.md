@@ -208,7 +208,7 @@ func searchnexttx(searchtxinfo string, blocknumber int, root *gtree.Node) {
 <br><br>
 <span style="color:skyblue">중부대학교 보안동아리 SCP 유재겸
   
-<br><br>
+<br>
 ## 참고 문헌
 <br>
 '박순태, 신용희, 강홍구.(2020).사이버 범죄에 악용되는 암호화폐 불법거래 추적.정보과학회지,38(9),40-47.'
