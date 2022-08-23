@@ -106,9 +106,7 @@ USER=mysql ID
 PASSWD=mysql ID의 암호
 DB=접속할 데이터베이스
 ```
-
-
-
+<br>
 **app.py**
 
 - python version 3.8.10
