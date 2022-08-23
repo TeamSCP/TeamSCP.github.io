@@ -13,12 +13,14 @@ last_modified_at: 2022-08-24
 ---
 
 # Bcrypt
+***
 
 비밀번호를 저장하는 목적으로 설계된 단방향 해시 함수이다. 단방향 해시 함수는 암호화는 가능하지만 복호화가 불가능하다. 회원가입 시 사용자가 입력한 비밀번호를 그대로 DB에 저장하는 것은 안전하지 않기 때문에 단방향 암호화를 거친 뒤 DB에 저장해야 한다.
 
 <br>
 
 ### 암호화가 왜 필요할까?
+***
 
 - 사용자가 입력한 비밀번호가 DB에 그대로 평문 저장된다면 DB가 해킹을 당할 경우 유저의 비밀번호가 그대로 노출된다.
 
@@ -29,14 +31,16 @@ last_modified_at: 2022-08-24
 <br>
 
 ### Bcrypt 암호화 진행 과정
+***
 
 ![6](https://user-images.githubusercontent.com/40850499/185931220-99e8a54f-e26c-44c1-8c47-c1561833015f.png)
 
 <br/>
 
 ### Bcrypt 비밀번호 암호화 실습
+***
 
-#### HTML
+**HTML**
 
 register.html
 
@@ -92,7 +96,7 @@ login.html
 
 <br>
 
-#### .env
+**.env**
 
 민감한 정보가 코드에 노출되는 것을 방지하기 위하여 민감 정보는 .env에 설정하고, app.py에서 os.getenv()를 통해 접근할 수 있도록 하였다.
 
@@ -105,7 +109,7 @@ DB=접속할 데이터베이스
 
 
 
-#### app.py
+**app.py**
 
 - python version 3.8.10
 
@@ -220,12 +224,14 @@ check = bcrypt.checkpw(pw, user_pw_hash)
 <br>
 
 # JWT (Json Web Token)
+***
 
 사용자가 로그인을 하면 서버에서 발행해주는 토큰을 가지고 브라우저의 저장소에 토큰을 유지시키는 방식을 토큰 방식이라고 한다. 여기에서 사용되는 토큰이 바로 JWT이다.
 
 <br>
 
 ### 구조
+***
 
 ![3](https://user-images.githubusercontent.com/40850499/185931437-188f150e-3338-4336-a1aa-d7c1b1ea0bb6.png)
 
@@ -252,18 +258,20 @@ JWT는 위 그림과 같이 .으로 구분하여 3파트로 나누어진다.
 <br>
 
 ### 인증 과정
+***
 
 ![2](https://user-images.githubusercontent.com/40850499/185931503-bad1e7ef-8242-447c-b055-63fb677bb1be.png)
 
 <br>
 
 ### 세션 방식
+***
 
 세션 방식은 서버의 메모리, 데이터베이스와 같은 서버의 자원들을 사용해서 사용자의 정보를 유지시키는 방식이다.
 
 <br>
 
-#### 세션 방식 인증 과정
+**세션 방식 인증 과정**
 
 1. 사용자 로그인
 
@@ -275,15 +283,16 @@ JWT는 위 그림과 같이 .으로 구분하여 3파트로 나누어진다.
 
 <br>
 
-#### 세션 방식의 문제점
+**세션 방식의 문제점**
 
 세션은 서버의 메모리 내부에 저장되기 때문에 세션의 양이 많아질 수록 메모리에 부하가 걸릴 수 있으며 쿠키와 세션의 정보가 유출되면 보안의 위험이 있다. 이러한 문제점을 해결하고자 고안된 것이 JWT이다.
 
 <br>
 
 ### JWT 인증 기반 로그인 실습
+***
 
-#### .env
+**.env**
 
 JWT 토큰 생성에는 payload와 secret key가 필요하다. 본인은 "RAINBOW"로 secret key를 설정하였다.
 
@@ -297,7 +306,7 @@ SECRET_KEY=RAINBOW
 
 <br>
 
-#### app.py
+**app.py**
 
 - PyJWT version 2.4.0
 
@@ -397,6 +406,7 @@ access_token = jwt.encode(payload, SECRET_KEY, algorithm='HS256')
 <br>
 
 # 참고
+***
 
 [비밀번호 암호화 Bcrypt (gensalt, hashpw, checkpw) : 네이버 블로그](https://blog.naver.com/PostView.naver?blogId=wldks79&logNo=222272099807)
 
