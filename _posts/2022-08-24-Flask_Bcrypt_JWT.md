@@ -396,15 +396,3 @@ access_token = jwt.encode(payload, SECRET_KEY, algorithm='HS256')
 ```
 
 <br>
-
-# 참고
-
-[비밀번호 암호화 Bcrypt (gensalt, hashpw, checkpw) : 네이버 블로그](https://blog.naver.com/PostView.naver?blogId=wldks79&logNo=222272099807)
-
-https://velog.io/@hxyxneee/bcrypt를-통해-비밀번호-암호화하기
-
-[인증 &amp; 인가 [Bcrypt, JWT] | Youngseo](https://youngseokim-kr.github.io/backend/backend01/)
-
-[JWT (JSON Web Token) 이해하기와 활용 방안 - Opennaru, Inc.](http://www.opennaru.com/opennaru-blog/jwt-json-web-token/)
-
-https://velog.io/@kingth/서버-인증-방식세션쿠키-토큰
