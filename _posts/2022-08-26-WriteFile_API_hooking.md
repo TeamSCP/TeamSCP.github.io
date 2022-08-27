@@ -80,7 +80,7 @@ API 후킹 방식(Method)에 대한 대분류로 API 후킹 방식은 작업 대
 
 ### API 후킹을 위한 공략 위치
 
-1. IAT
+  1. IAT
 
 IAT에 있는 API 주소를 후킹 함수로 변경하는 방법입니다.
 
@@ -88,7 +88,7 @@ IAT에 있는 API 주소를 후킹 함수로 변경하는 방법입니다.
 
 단점 : IAT에 없는데 프로그램에서 사용되는 API들에 대해서 후킹 불가능(예 : DLL을 동적으로 로딩해서 사용하는 경우)
 
-2. Code
+  2. Code
 
 프로세스 메모리에 매핑된 시스템 라이브러리(*.dll)에서 API의 실제 주소를 찾아가 코드를 직접 수정해버리는 방법입니다.
 
@@ -99,7 +99,7 @@ IAT에 있는 API 주소를 후킹 함수로 변경하는 방법입니다.
 - 함수 일부 덮어쓰기
 
 - 필요한 부분만 일부 변경
-3. EAT
+  3. EAT
 
 DLL의 EAT에 기록된 API의 시작 주소를 후킹 함수 주소로 변경하는 방법입니다.
 
@@ -111,7 +111,7 @@ DLL의 EAT에 기록된 API의 시작 주소를 후킹 함수 주소로 변경�
 
 크게 디버그 기법과 인젝션 기법으로 나눌 수 있습니다.
 
-1. 디버그 기법
+  1. 디버그 기법
 
 대상 프로세스를 디버깅하면서 API 후킹을 하는 방법입니다.
 
@@ -119,7 +119,7 @@ DLL의 EAT에 기록된 API의 시작 주소를 후킹 함수 주소로 변경�
 
 여기서의 디버거는 일반적인 올리디버거, x64디버거, IDA와 같은 프로그램이 아니라 후킹을 위해 사용자가 직접 제작한 프로그램을 뜻합니다. 즉 프로그램에서 Debug API를 이용하여 대상 프로세스에 Attach하고 후킹 함수를 설치합니다. 그런 후에 실행을 재개하면 API 후킹이 이뤄집니다.
 
-2. 인젝션 기법
+  2. 인젝션 기법
 
 인젝션 기법은 해당 프로세스 메모리 영역에 침투하는 기술로, 인젝션 대상에 따라 DLL 인젝션과 Code 인젝션으로 나눌 수 있습니다.
 
@@ -425,7 +425,7 @@ int main(int argc, char* argv[])
 }
 ```
 
-### 1. main()
+  ### 1. main()
 
 ```
 int main(int argc, char* argv[])
@@ -462,7 +462,7 @@ DebugActiveProcess() MSDN을 확인해보면 다음과 같이 입력한 PID를 �
 
 그 다음 DebugLoop() 함수로 들어가서 디버기로부터 오는 디버그 이벤트를 처리합니다.
 
-### 2. DebugLoop()
+  ### 2. DebugLoop()
 
 ```
 void DebugLoop()
@@ -525,11 +525,11 @@ ContinueDebugEvent() MSDN을 확인해보면 마지막 파라미터인 dwContinu
 
 DebugLoop() 함수에서는 세 가지 디버그 이벤트를 처리합니다.
 
-1. EXIT_PROCESS_DEBUG_EVENT
+  1. EXIT_PROCESS_DEBUG_EVENT
 
 디버기 프로세스가 종료될 때 발생하는 이벤트로 위 코드에서 이벤트가 발생하면 디버거도 같이 종료합니다.
 
-2. CREATE_PROCESS_DEBUG_EVENT
+  2. CREATE_PROCESS_DEBUG_EVENT
 
 CREATE_PROCESS_DEBUG_EVENT의 이벤트 핸들러인 OnCreateProcessDebugEvent()는 디버기의 프로세스가 시작(혹은 Attach)될 때 호출됩니다.
 
@@ -566,7 +566,7 @@ CREATE_PROCESS_DEBUG_INFO 구조체 hProcess 멤버(디버기 프로세스 핸�
 
 디버그 방법에서 후킹 방법은 API 시작 위치에 브레이크 포인트를 설치하면 됩니다. 디버기의 프로세스 핸들을 가지고 있기 때문에 ReadProcessMemory(), WriteProcessMemory() API를 이용하여 디버기의 프로세스 메모리 공간에 자유롭게 읽기/쓰기 작업을 할 수 있습니다.
 
-### 3. EXCEPTION_DEBUG_EVENT - OnExceptionDebugEvent()
+  ### 3. EXCEPTION_DEBUG_EVENT - OnExceptionDebugEvent()
 
 가장 핵심적인 EXCEPTION_DEBUG_EVENT 이벤트 핸들러인 OnExceptionDebugEvent()는 디버기의 INT3 명령을 처리하게 될 함수입니다.
 
@@ -654,7 +654,7 @@ WriteFile() 시작 주소는 OnCreateProcessDebugEvent()에서 미리 얻어 놓
 
 ---
 
-1. Unhook(API 훅 제거 )
+  1. Unhook(API 훅 제거 )
 
 ```
 //0xCC 로 덮어쓴 부분을 original byte 로 되돌림
@@ -666,7 +666,7 @@ WriteProcessMemory(g_cpdi.hProcess, g_pfWriteFile,
 
 ---
 
-2. ThreadContext(쓰레드 컨텍스트) 구하기
+  2. ThreadContext(쓰레드 컨텍스트) 구하기
 
 모든 프로그램은 프로세스 단위로 실행되고 프로세스의 실제 명령어 코드는 쓰레드 단위로 실행됩니다. Windows OS는 멀티쓰레드 기반이기 때문에 하나의 프로세스에서 여러 쓰레드가 동시에 실행될 수 있습니다.
 
@@ -681,7 +681,7 @@ GetThreadContext(g_cpdi.hThread, &ctx);
 
 ---
 
-3. WriteFile()의 param 2, 3 값 구하기
+  3. WriteFile()의 param 2, 3 값 구하기
 
 ```
 //   함수의 파라미터는 해당 프로세스의 스택에 존재함
@@ -730,7 +730,7 @@ free(lpBuffer);
 
 ---
 
-9. Thread Context의 EIP를 WriteFile() 시작으로 변경하기
+  9. Thread Context의 EIP를 WriteFile() 시작으로 변경하기
 
 CONTEXT에서 Eip 멤버를 WriteFile() 시작 위치로 변경합니다.
 
@@ -746,7 +746,7 @@ CONTEXT.Eip 멤버를 변경한 후 SetThreadContext() API를 호출합니다.
 
 ---
 
-10. 디버거 프로세스 진행
+  10. 디버거 프로세스 진행
 
 이제 정상적인 WriteFile() API를 호출해야 하므로 ContinueDebugEvent() API를 호출하여 디버기 프로세스의 실행을 재개합니다.
 
@@ -759,7 +759,7 @@ CONTEXT.Eip를 WriteFile() 시작으로 되돌렸으므로 WriteFile() 호출이
 
 ---
 
-11. API 훅 설치
+  11. API 훅 설치
 
 ```
 WriteProcessMemory(g_cpdi.hProcess, g_pfWriteFile, 
