@@ -777,4 +777,4 @@ WriteProcessMemory(g_cpdi.hProcess, g_pfWriteFile,
 
 [reversecore · GitHub](https://github.com/reversecore) (리버싱 핵심원리 예제 GitHub)
 
-https://reversecore.com/    (리버싱 핵심원리 저자 블로그)
+[리버스코어 블로그](https://reversecore.com)    (리버싱 핵심원리 저자 블로그)
