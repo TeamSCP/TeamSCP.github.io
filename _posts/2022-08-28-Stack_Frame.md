@@ -13,9 +13,9 @@ last_modified_at: 2022-08-28
 
 ---
 
-# 스택(Stack)
+# **스택(Stack)**
 
-## 스택(Stack)의 개념
+## **스택(Stack)의 개념**
 
 **LIFO(Last In First Out)**  또는  **FILO(First In Last Out)**  형태로 동작하는 선형 자료 구조
 
@@ -45,13 +45,13 @@ last_modified_at: 2022-08-28
 
 <br>
 
-## 스택(Stack)의 특징
+## **스택(Stack)의 특징**
 
 -   제일 위의 데이터만 알 수 있다.
 -   스택이 담을 수 있는 크기를 초과하여 자료를 Push 하면  **스택 오버플로우(Stack Overflow)**가 발생한다.
 -   스택이 비었을 때 Pop을 하면  **스택 언더플로우(Stack Underflow)**가 발생한다.
   
-## 스택(Stack)의 활용 사례
+## **스택(Stack)의 활용 사례**
 
 **※ 주로 왔던 길을 되돌아갈 때 유용**
 
@@ -62,7 +62,7 @@ last_modified_at: 2022-08-28
 -   함수 호출 시 복귀 저장
 -   재귀 함수 호출 시 복귀 저장
 
-## 스택의 연산
+## **스택의 연산**
 
 -   **push(item)**  : 스택에 데이터(item) 추가
 -   **pop()**  : 스택의 맨 위 원소를 제거하고 반환
@@ -75,9 +75,9 @@ last_modified_at: 2022-08-28
 ---
 <br>
 
-# Python으로 스택 구현하기
+# **Python으로 스택 구현하기**
 
-## ADT Stack
+## **ADT Stack**
 
 > **ADT(Abstract Data Type)** 란?  
 > 프로그래밍 언어에서 사용되는 데이터형을 정의함에 있어서 그 데이터형에 적용 가능한 연산 형식과 제약 조건 등만을 보여주고 실제로 그 연산이 어떻게 구체적으로 표현되어 있는지는 알 수 없게 하는 기능.  
@@ -97,9 +97,9 @@ last_modified_at: 2022-08-28
   
 <br>
 
-## 스택 구현하기 - 부분 설명
+## **스택 구현하기 - 부분 설명**
 
-### 1. 클래스 생성과 __init__
+### **1. 클래스 생성과 __init__**
 
 ```python
 class STACK:
@@ -122,7 +122,7 @@ STACK이라는 클래스를 생성해주었다.
     
 <br>
 
-### 2. isEmptyStack()과 isFullStack()
+### **2. isEmptyStack()과 isFullStack()**
 ```python
     def isEmptyStack(self):
         if self.top == -1:
@@ -152,7 +152,7 @@ push와 pop을 해주기 위해서는 먼저 스택이 완전히 비워져 있�
 
 <br>
 
-### 3. peek()
+### **3. peek()**
 ```python
     def peek(self):
         if self.isEmptyStack() == True:
@@ -166,7 +166,7 @@ push와 pop을 해주기 위해서는 먼저 스택이 완전히 비워져 있�
 
   <br>
 
-### 4. clear()
+### **4. clear()**
 ```python
     def clear(self):
         self.stack = []
@@ -176,7 +176,7 @@ stack 변수를 다시 빈 리스트로 선언해주고, top의 값도 -1로 저
 
   <br>
 
-### 5. size()
+### **5. size()**
 ```python
     def size(self):
         return len(self.stack)
@@ -185,7 +185,7 @@ len()을 이용해 스택의 크기를 반환해준다.
 
   <br>
 
-### 6. display()
+### **6. display()**
 ```python
     def display(self):
         for a in reversed(self.stack):
@@ -195,7 +195,7 @@ len()을 이용해 스택의 크기를 반환해준다.
 
   <br>
   
-### 7. push()
+### **7. push()**
 ```python
     def push(self, item):
         if self.isFullStack() == True:
@@ -210,7 +210,7 @@ len()을 이용해 스택의 크기를 반환해준다.
 
   <br>
   
-### 8. pop()
+### **8. pop()**
 ```python
     def pop(self):
         if self.isEmptyStack() == True:
@@ -231,7 +231,7 @@ top의 위치 값도 1 감소시켜준다.
   
 <br>
 
-## 전체 코드
+## **전체 코드**
 ```python
 class STACK:
     def __init__(self, max_size=5):
@@ -287,9 +287,9 @@ class STACK:
 ---
 <br>
 
-# 스택 프레임(Stack Frame)
+# **스택 프레임(Stack Frame)**
 
-## 스택 프레임(Stack Frame)이란?
+## **스택 프레임(Stack Frame)이란?**
 
 ESP(스택 포인터)가 아닌  **EBP(베이스 포인터) 레지스터를 사용하여**
 **스택 내의 로컬 변수, 파라미터, 복귀 주소에 접근**하는 기법
@@ -299,11 +299,11 @@ ESP(스택 포인터)가 아닌  **EBP(베이스 포인터) 레지스터를 사�
 
   <br>
 
-## 짚고 넘어가기 - 스택
+## **짚고 넘어가기 - 스택**
 
   
 
-### (1) Push
+### **(1) Push**
 
 <img width="533" alt="push" src="https://user-images.githubusercontent.com/85911868/187040366-15be39a7-4789-4970-81da-2c59155f9225.png">
 
@@ -311,7 +311,7 @@ ESP(스택 포인터)가 아닌  **EBP(베이스 포인터) 레지스터를 사�
 
   
 
-### (2) Pop
+### **(2) Pop**
 
 <img width="534" alt="pop" src="https://user-images.githubusercontent.com/85911868/187040375-0e0e2194-04eb-4cec-9b1d-613ac964881c.png">
 
@@ -323,7 +323,7 @@ ESP(스택 포인터)가 아닌  **EBP(베이스 포인터) 레지스터를 사�
 
 <br>
 
-## 함수의 호출 단계
+## **함수의 호출 단계**
 
 1.  함수가 사용할 매개 변수를 넣고 함수 시작 지점으로 점프한다. ➡️  **함수 호출**
 2.  함수 내에서 사용할 스택 프레임을 설정한다. ➡️  **함수 프롤로그**
@@ -332,7 +332,7 @@ ESP(스택 포인터)가 아닌  **EBP(베이스 포인터) 레지스터를 사�
 
 <br>
   
-## 스택 프레임의 구조
+## **스택 프레임의 구조**
 ```swift
 PUSH EBP           # 함수시작 (EBP를 사용하기 전에 기존의 값을 스택에 저장) 
 MOV EBP, ESP       # 현재의 ESP를 EBP에저장 
@@ -347,7 +347,7 @@ RETN               # 함수 종료
 ```
   <br>
 
-### (1) 함수 프롤로그
+### **(1) 함수 프롤로그**
 ```swift
 PUSH EBP           # 함수시작 (EBP를 사용하기 전에 기존의 값을 스택에 저장) 
 MOV EBP, ESP       # 현재의 ESP를 EBP에저장
@@ -370,10 +370,11 @@ RETN               # 함수 종료
 
   <br>
 
-## 실습하기
+## **실습하기**
 
-### C 코드
-```C
+### **C 코드**
+
+```c
 #include <stdio.h>
 
 int sub(int a, int b) {
@@ -393,18 +394,18 @@ int main() {
 
   
 
-### main() 함수
+### **main() 함수**
 
 ![1](https://user-images.githubusercontent.com/85911868/187040912-0dd946a1-0168-4522-8222-2cd4c1ed1278.png)
 
 
-### sub() 함수
+### **sub() 함수**
 
 ![2](https://user-images.githubusercontent.com/85911868/187040933-fbf6eccc-6684-4564-86e4-f7d9ab77d3fa.png)
 
   <br>
 
-### (1) main() 함수 시작 & 스택 상태
+### **(1) main() 함수 시작 & 스택 상태**
 
 ⬇️main() 함수를 실행했을 때의 스택 상태
 
@@ -416,7 +417,7 @@ EBP의 값을 스택에 집어넣는 과정은 EBP가 이전에 가지고 있던
 
 <br>
 
-### (2) main() 함수 스택 프레임 생성
+### **(2) main() 함수 스택 프레임 생성**
 
 ![5](https://user-images.githubusercontent.com/85911868/187043351-f7f88870-7656-4a20-9a99-2e18013dc692.png)
 
@@ -434,7 +435,7 @@ main() 함수가 끝날 때까지 EBP 값은 고정된다.
 
   <br>
   
-### (3) 지역 변수 설정
+### **(3) 지역 변수 설정**
 
 ⬇️해당 C 코드
 ```c
@@ -469,7 +470,7 @@ int a = 5, b = 1;
 
   <br>
   
-### (4) sub() 함수 매개 변수 입력 & sub() 함수 호출
+### **(4) sub() 함수 매개 변수 입력 & sub() 함수 호출**
 
 ⬇️해당 C 코드
 ```c
@@ -500,7 +501,7 @@ ECX에는 [EBP-8] 즉, 5를 옮겨주고 스택에 넣는다.
 
 <br>
 
-### (5) sub() 함수 시작 & 스택 프레임 생성
+### **(5) sub() 함수 시작 & 스택 프레임 생성**
 
 ⬇️해당 C 코드
 ```c
@@ -525,7 +526,7 @@ main() 함수에서 사용되던 EBP 값(12FFBB8)을 스택에 백업한 후 EBP
 
 <br>
 
-### (6) sub() 함수의 지역 변수 설정
+### **(6) sub() 함수의 지역 변수 설정**
 
 ⬇️해당 C 코드
 ```c
@@ -557,7 +558,7 @@ sub() 함수에서 스택 프레임이 생성되면서 EBP의 값이 변했다.
   
 <br>
 
-### (7) sub() 연산
+### **(7) sub() 연산**
 ```c
 	return (x - y);
 ```
@@ -577,7 +578,7 @@ EAX에 [EBP-4] 즉, x를 옮겨준다.
 
   <br>
 
-### (8) sub() 함수 스택 프레임 해제 & 함수 종료(리턴)
+### **(8) sub() 함수 스택 프레임 해제 & 함수 종료(리턴)**
 ```c
 	return (x - y);
 }
@@ -644,7 +645,7 @@ RETN 명령어가 실행되면 스택에 저장된 복귀 주소로 리턴한다
 
 <br>
 
-### (9) sub() 함수 매개 변수 제거(스택 정리)
+### **(9) sub() 함수 매개 변수 제거(스택 정리)**
 
 ![](https://blog.kakaocdn.net/dn/bbkrwJ/btrKIsqsmvD/SEF8LnGwg7RPNUXQT1PR2k/img.png)
 
@@ -670,7 +671,7 @@ sub() 함수에서 다시 main() 함수로 돌아왔다.
 
 <br>
 
-### (10) printf() 함수 호출
+### **(10) printf() 함수 호출**
 
 ⬇️해당 C 코드
 ```c
@@ -688,7 +689,7 @@ sub() 함수에서 다시 main() 함수로 돌아왔다.
 
   <br>
 
-### (11) 리턴 값 설정
+### **(11) 리턴 값 설정**
 
 ⬇️해당 C 코드
 ```c
@@ -706,7 +707,7 @@ XOR을 사용하는 이유는 'MOV' 명령어보다 실행 속도가 빠르기 �
 
 <br>
 
-### (11) 스택 프레임 해제 & main() 함수 종료
+### **(11) 스택 프레임 해제 & main() 함수 종료**
 
 ⬇️해당 C 코드
 ```c
@@ -737,7 +738,7 @@ POP EBP까지 실행하고 나면 아래의 이미지와 같이  **main() 함수
 
  <br><br>
  ---
- ### 참고 자료
+ ### **참고 자료**
  
  이승원. 『리버싱 핵심 원리』. 인사이트, 2012
  
