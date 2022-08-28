@@ -1,5 +1,5 @@
 ﻿---
-title: "스택과 스택 프레임"
+title: "스택(Stack)과 스택 프레임(Stack Frame)"
 author:
   name: 전유경
   
