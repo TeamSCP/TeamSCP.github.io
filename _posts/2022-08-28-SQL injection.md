@@ -3,8 +3,8 @@ title: "SQL Injection "
 author: 이정호 
   name: 이정호
 
-categories:Web
-tags: [Blog, SCP, SQL, SQL injection, ] 
+categories: Web
+tags: [Blog, SCP, SQL, SQL injection] 
 
 date: 2022-08-28
 last_modified_at: 2022-08-28
