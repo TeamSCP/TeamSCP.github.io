@@ -1,12 +1,12 @@
 ---
 title: "SQL injection"
-author: 이정호
+author:
   name: 이정호
 
 categories:
   - Web
 tags:
-  - [Blog, SQL, SQL injection, Web, SCP] 
+  - [SQL, SQL injection, Web] 
 
 date: 2022-08-28
 last_modified_at: 2022-08-28
