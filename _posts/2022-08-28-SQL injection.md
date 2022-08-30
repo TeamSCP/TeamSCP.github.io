@@ -1,6 +1,6 @@
 ---
 title: "SQL Injection "
-author: 이정호 
+author: 
   name: 이정호
 
 categories:
