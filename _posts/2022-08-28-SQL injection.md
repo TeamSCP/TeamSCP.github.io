@@ -6,7 +6,7 @@ author:
 categories:
   - Web
 tags:
-  - [Blog, SCP, SQL, SQL injection, ] 
+  - [SQL, SQL injection] 
 
 date: 2022-08-28
 last_modified_at: 2022-08-28
