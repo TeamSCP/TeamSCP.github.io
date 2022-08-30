@@ -21,8 +21,7 @@ SQL: DB에 명령 내릴 때 쓰는 언어
 Injection: 삽입  
 임의의 SQL문을 삽입하고 실행시켜 데이터 베이스가 비정상적인 동작을 하도록
 조작하는 행위이다.   
-
-***
+* * *
 <br>
 
 # 2. SQL Injection 공격의 목적
@@ -32,7 +31,7 @@ Injection: 삽입
 #### 3. 인증 우회 
 #### 4. DB 데이터 변조
 #### 5. 악성 파일 업로드
-***
+* * *
 <br>
 
 # 3. SQL Injection 공격의 종류
@@ -59,8 +58,8 @@ SELECT * FROM users
 ````    
 <span style="color:red">';</span>
  으로 마무리 하고, <span style="color:red">DROP TABLE users;</span> 새구문으로 사용자 테이블을 삭제하고 <span style="color:red">--</span> 뒷 내용을 주석 처리한다면
-사용자 테이블을 전체 삭제하는 구문으로 서버 자체를 운영하지 못하게 할 수도 있는 공격 기법이다.
-***
+사용자 테이블을 전체 삭제하는 구문으로 서버 자체를 운영하지 못하게 할 수도 있는 공격 기법이다.            
+* * *
 ### 2. Union based SQL Injection
 원래의 요청에 추가 쿼리를 삽입하여 정보를 얻어내는 기법으로 
 2개 이상의 쿼리를 요청하여 결과를 얻는 Union 명령어를 이용여 공격으로 하나의 테이블로 결과를 얻는다.  
@@ -76,19 +75,19 @@ INPUT 안에
 'UNION SELECT null,id,password FROM Users--    
 ```
 를 넣어주게 되면 두 쿼리문이 합쳐져 하나의 테이블로 보여지게 된다.
-즉, Board 테이블의 id, password가 게시글과 함께 화면에 나타난다.   
-***
+즉, Board 테이블의 id, password가 게시글과 함께 화면에 나타난다.              
+* * *
 
 ### 3. Blind based SQL Injection   
 DB로부터 특정 데이터 전달받지 않고 즉, 정보를 직접적으로 알 수 없는 상황이더라도 참과 거짓 정보만을 통해 알아내는 기법이다.
 웹 서버 보안으로 인해 기존 SQL Injection 공격 기법을 통한 정보가 출력되지 않는 경우 해당 기법을 시도할 수 있다.
-***
+* * *
 
 ### 4. Stored Procedure based SQL Injection   
 일련의 쿼리들을 모아 하나의 함수처럼 사용하기 위한 기법으로 공격자는 시스템 권한을 획득 해야 하는 
 공격난이도가 높은 공격이지만 공격에 성공한다면, 서버에 직접적인 피해를 가할 수 있다.
 공격에 사용되는 대표적인 저장 프로시저는 MS-SQL 에 있는 xp_cmdshell로 윈도우 명령어를 사용할 수 있게 된다.
-***
+* * *
 
 <br>
 
