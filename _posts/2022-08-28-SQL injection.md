@@ -6,7 +6,7 @@ author: 이정호
 categories:
   - Web
 tags:
-  - [Blog, SQL, SQL injection, Web] 
+  - [Blog, SQL, SQL injection, Web, SCP] 
 
 date: 2022-08-28
 last_modified_at: 2022-08-28
