@@ -10,7 +10,7 @@ tags:
   - [Web Hacking]
 
 date: 2022-09-13
-last_modified_at: 2022-09-13
+last_modified_at: 2022-09-15
 ---
 
 # Brute Force 이란?
